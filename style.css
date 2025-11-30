@@ -1,0 +1,46 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+    background-color: #282c34; /* ダーク系の背景 */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    overflow: hidden; /* スクロールバー非表示 */
+}
+
+.clock-container {
+    background-color: #3a404a; /* 時計の背景 */
+    padding: 30px 60px;
+    border-radius: 15px;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.5); /* ネオン風の光 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.digital-clock {
+    font-size: 8rem; /* 大きなフォントサイズ */
+    color: #00ffff; /* シアン系のネオンカラー */
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff; /* ネオン効果 */
+    letter-spacing: 5px; /* 文字間隔 */
+}
+
+/* レスポンシブ対応 */
+@media (max-width: 768px) {
+    .digital-clock {
+        font-size: 5rem;
+    }
+    .clock-container {
+        padding: 20px 40px;
+    }
+}
+
+@media (max-width: 480px) {
+    .digital-clock {
+        font-size: 3rem;
+    }
+    .clock-container {
+        padding: 15px 30px;
+    }
+}
