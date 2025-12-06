@@ -6,7 +6,7 @@ body {
     margin: 0;
     background-color: #282c34; /* ダーク系の背景 */
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    overflow: hidden; /* スクロールバー非表示 */
+    overflow: hidden;
 }
 
 .clock-container {
@@ -15,15 +15,23 @@ body {
     border-radius: 15px;
     box-shadow: 0 0 30px rgba(0, 255, 255, 0.5); /* ネオン風の光 */
     display: flex;
-    justify-content: center;
+    flex-direction: column; /* 縦に並べる */
     align-items: center;
 }
 
+.date-display {
+    font-size: 2.5rem; /* 時刻より小さく */
+    color: #00ffff;
+    opacity: 0.8; /* 少し透明度を下げて、時刻を目立たせる */
+    margin-bottom: 10px;
+    text-shadow: 0 0 5px rgba(0, 255, 255, 0.5);
+}
+
 .digital-clock {
-    font-size: 8rem; /* 大きなフォントサイズ */
-    color: #00ffff; /* シアン系のネオンカラー */
-    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff; /* ネオン効果 */
-    letter-spacing: 5px; /* 文字間隔 */
+    font-size: 8rem;
+    color: #00ffff;
+    text-shadow: 0 0 10px #00ffff, 0 0 20px #00ffff, 0 0 30px #00ffff;
+    letter-spacing: 5px;
 }
 
 /* レスポンシブ対応 */
@@ -31,16 +39,10 @@ body {
     .digital-clock {
         font-size: 5rem;
     }
+    .date-display {
+        font-size: 2rem;
+    }
     .clock-container {
         padding: 20px 40px;
-    }
-}
-
-@media (max-width: 480px) {
-    .digital-clock {
-        font-size: 3rem;
-    }
-    .clock-container {
-        padding: 15px 30px;
     }
 }
